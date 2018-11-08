@@ -87,6 +87,7 @@ NOCOMPRESS NO INMEMORY
 
 创建order_details表：
 
+```
  CREATE TABLE order_details
 (
 id NUMBER(10, 0) NOT NULL
@@ -147,3 +148,4 @@ PCTFREE 10
 )
 NOCOMPRESS NO INMEMORY
 );
+```
