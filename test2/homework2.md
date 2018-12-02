@@ -63,7 +63,7 @@ wang
 SQL> exit
 ```
 
-- 第4步：用户wy将视图mview权限赋予给xiaoqingyu用户，并在xiangqingyu用户上查看
+- 第4步：用户wy将视图myview权限赋予给xiaoqingyu用户，并在xiaoqingyu用户上查看
 ```sql
 $ sqlplus wy/123@pdborcl
 SQL> GRANT SELECT ON myview TO xiaoqingyu;
