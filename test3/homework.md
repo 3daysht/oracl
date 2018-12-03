@@ -182,8 +182,8 @@ begin
     V_EMPLOYEE_ID:=CASE I MOD 6 WHEN 0 THEN 11 WHEN 1 THEN 111 WHEN 2 THEN 112
                                 WHEN 3 THEN 12 WHEN 4 THEN 121 ELSE 122 END;
     v_order_id:=i;
-    v_name := 'xiao' || i;
-    v_tel := '18281823545';
+    v_name := 'w' || i;
+    v_tel := '15928607871';
     --插入订单
     insert  into ORDERS (ORDER_ID,CUSTOMER_NAME,CUSTOMER_TEL,ORDER_DATE,EMPLOYEE_ID,DISCOUNT)
       values (v_order_id,v_name,v_tel,dt,V_EMPLOYEE_ID,dbms_random.value(100,0));
@@ -202,6 +202,6 @@ select * from orders a INNER JOIN order_details b ON (a.order_id=b.order_id);
 执行计划:
 ```
 EXPLAIN plan for
-select * from xiaoqingyu.orders a INNER JOIN xiaoqingyu.order_details b ON (a.order_id=b.order_id);
+select * from wy.orders a INNER JOIN wy.order_details b ON (a.order_id=b.order_id);
 select * from table(dbms_xplan.display());
 ```
