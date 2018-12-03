@@ -11,6 +11,25 @@
 假设有一个生产某个产品的单位，单位接受网上订单进行产品的销售。通过实验模拟这个单位的部分信息：员工表，部门表，订单表，订单详单表。
 
 ## 实验过程：
+
+表创建：
+```
+Create Tablespace Users02
+datafile
+'/home/oracle/app/oracle/oradata/orcl/pdborcl/pdbtest_users02_1.dbf'
+  SIZE 100M AUTOEXTEND ON NEXT 256M MAXSIZE UNLIMITED,
+'/home/oracle/app/oracle/oradata/orcl/pdborcl/pdbtest_users02_2.dbf'
+  SIZE 100M AUTOEXTEND ON NEXT 256M MAXSIZE UNLIMITED
+EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+```
+
+用户创建：
+```
+CREATE USER wy IDENTIFIED BY 123
+DEFAULT TABLESPACE "USERS"
+TEMPORARY TABLESPACE "TEMP";
+```
+
 为用户分配空间及权限：
 ```
 ALTER USER wy QUOTA UNLIMITED ON USERS;
